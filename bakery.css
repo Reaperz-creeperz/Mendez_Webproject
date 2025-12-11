@@ -1,0 +1,389 @@
+/* ============================
+   bakery.css — Full stylesheet
+   ============================ */
+
+/* ---------- Base / layout ---------- */
+:root{
+    --bg: #FFF5E1;
+    --card: #FDF6EF;
+    --accent: #E76F51;
+    --warm: #F4A261;
+    --text: #3F2A1D;
+    --muted: #d9b99b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: var(--text);
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+#wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: var(--warm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.brand {
+    text-align: left;
+}
+
+.brand h1 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: var(--text);
+}
+
+/* ---------- Nav ---------- */
+nav {
+    background-color: var(--accent);
+    padding: 10px 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+}
+
+.nav-list {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #FDF6EF;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 0.98rem;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    background: rgba(255,255,255,0.06);
+    color: #FFE8D6;
+}
+
+.nav-list a.active {
+    background: rgba(0,0,0,0.06);
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.03);
+}
+
+/* ---------- Main content ---------- */
+main {
+    background-color: var(--card);
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    margin-top: 18px;
+    overflow: auto;
+    text-align: left;
+}
+
+/* ---------- Intro section ---------- */
+.intro-text {
+    padding: 10px;
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.intro-text p {
+    font-size: 1.15em;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.cta {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #FDF6EF;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.25s ease;
+}
+
+.cta:hover { background-color: #d65b3d; }
+
+.image-container {
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.main-image,
+.feature-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    margin: 8px 0;
+}
+
+.bakery { color: var(--accent); font-weight: bold; }
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--warm);
+    padding: 1em;
+    text-align: center;
+    color: var(--text);
+    font-size: 0.9em;
+    border-radius: 10px;
+    margin-top: 18px;
+}
+
+/* ---------- Menu page styling ---------- */
+.menu-section {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu-section h3 {
+    color: var(--accent);
+    margin-top: 20px;
+    font-size: 1.4em;
+}
+
+.menu-table-wrap {
+    overflow-x: auto;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.menu-table thead th {
+    background: linear-gradient(90deg, rgba(231,111,81,0.95), rgba(244,162,97,0.95));
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 4px solid rgba(0,0,0,0.03);
+}
+
+.menu-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #f1e7df;
+    vertical-align: top;
+}
+
+.menu-table tbody tr:hover {
+    background: #FFF8F3;
+}
+
+.menu-table .price {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.price-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    background: rgba(231,111,81,0.08);
+    border-radius: 8px;
+    border: 1px solid rgba(231,111,81,0.12);
+    font-weight: 700;
+}
+
+/* ---------- Events page styling ---------- */
+.events-section {
+    width: 100%;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-card {
+    background-color: var(--bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+    text-align: left;
+}
+
+.event-card h3 { color: var(--accent); margin-top: 0; font-size: 1.3rem; }
+.event-card p { margin: 6px 0; line-height: 1.4; }
+
+/* ---------- FIXED VIDEO STYLING ---------- */
+.event-video,
+.video-container {
+    max-width: 100%;
+    margin: 30px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.event-video iframe,
+.video-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0; /* FIXES VALIDATOR ERROR */
+    display: block;
+    border-radius: 12px;
+}
+
+/* Aspect ratio support */
+@supports (aspect-ratio: 16 / 9) {
+    .event-video,
+    .video-container {
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+    .event-video iframe,
+    .video-container iframe {
+        height: 100%;
+    }
+}
+
+/* ---------- Contact page styling ---------- */
+.contact-container {
+    width: 100%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.contact-info,
+.contact-form {
+    width: 48%;
+    text-align: left;
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+}
+
+.contact-info h3,
+.contact-form h3 { color: var(--accent); margin-top: 0; }
+
+.contact-form form { display: grid; gap: 10px; }
+
+.contact-form label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--muted);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: var(--accent);
+    color: #FDF6EF;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.contact-form button:hover { background-color: #d65b3d; }
+
+.small {
+    font-size: 0.95rem;
+    color: #5b4639;
+}
+
+/* ---------- Responsive / Media Queries ---------- */
+@media (max-width: 900px) {
+    #wrapper { width: 92%; padding: 16px; }
+
+    .intro-text { width: 100%; display: block; }
+    .image-container { width: 100%; display: block; margin-top: 12px; }
+
+    .contact-container { flex-direction: column; }
+    .contact-info, .contact-form { width: 100%; }
+
+    .menu-table { min-width: 100%; }
+}
+
+@media (max-width: 600px) {
+    header { padding: 10px; justify-content: center; gap: 8px; }
+    .brand h1 { font-size: 1.2rem; }
+
+    nav { width: 100%; }
+    .nav-list { flex-direction: column; gap: 8px; align-items: stretch; }
+    .nav-list a { display: block; padding: 10px; text-align: center; }
+
+    #wrapper { width: 95%; padding: 12px; }
+
+    .event-video iframe,
+    .video-container iframe {
+        height: 220px;
+    }
+}
+
+/* ---------- Focus styles ---------- */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid rgba(231,111,81,0.18);
+    outline-offset: 2px;
+}
